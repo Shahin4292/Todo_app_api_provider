@@ -35,8 +35,7 @@ class TodoList extends StatelessWidget {
                     if(value == "edit"){}
                     if(value == "delete"){}
                   },
-
-                )
+                ),
               ),
             );
           }
