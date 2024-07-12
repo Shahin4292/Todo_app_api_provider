@@ -10,7 +10,7 @@ class NavigationService {
     navigationKey = GlobalKey<NavigatorState>();
   }
 
-  navigator(Widget rn) {
+  navigate(Widget rn) {
     return navigationKey.currentState!
         .push(MaterialPageRoute(builder: (context) => rn));
   }
