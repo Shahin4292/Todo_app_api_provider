@@ -9,6 +9,10 @@ class TodoList extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Todo List"),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {  },
+        child: const Icon(Icons.add),
+      ),
       body: Column(
         children: [
           ListView.builder(
