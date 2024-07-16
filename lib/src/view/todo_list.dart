@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:todo_apps/src/viewmodel/todo_viewmodel.dart';
 
 class TodoList extends StatelessWidget {
   const TodoList({super.key});
+
   @override
   Widget build(BuildContext context) {
+    final todoController = Provider.of<TodoViewModel>(context);
     return Scaffold(
       backgroundColor: Colors.red,
       appBar: AppBar(
@@ -11,7 +15,7 @@ class TodoList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-
+          todoController.navigateToCreate(context);
         },
         child: const Icon(Icons.add),
       ),

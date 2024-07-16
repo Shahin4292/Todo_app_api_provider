@@ -10,7 +10,7 @@ class TodoViewModel extends ChangeNotifier{
   TodoViewModel(this._navigationService);
 
   navigateToCreate(context){
-    _navigationService.navigate(const TodoCreate())
+    _navigationService.navigate(const TodoCreate());
 
   }
 
