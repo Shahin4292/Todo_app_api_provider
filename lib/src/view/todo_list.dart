@@ -15,7 +15,7 @@ class TodoList extends StatelessWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          todoController.navigateToCreate(context);
+          todoController.navigateToCreate();
         },
         child: const Icon(Icons.add),
       ),
@@ -42,7 +42,9 @@ class TodoList extends StatelessWidget {
                         child: Text("delete"))
                   ],
                   onSelected: (String value) {
-                    if(value == "edit"){}
+                    if(value == "edit"){
+                      todoController.navigateToEdit();
+                    }
                     if(value == "delete"){}
                   },
                 ),
